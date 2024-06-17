@@ -14,12 +14,10 @@ import {useState} from "react";
 import {Separator} from "@/components/ui/separator";
 import {Github, Menu, Moon, Sun} from "lucide-react";
 import {useTheme} from "next-themes";
-import Search from "@/plugins/search";
 
 const Header = () => {
     const {githubRepo, header: {logo, title, routes}} = siteData
 
-    //高亮导航栏
     const pathname = usePathname()
     const active = routes.find((item: any) => item.value == '/' + pathname.split('/')[1])?.name
 
@@ -76,7 +74,7 @@ const Header = () => {
                         </SheetContent>
                     </Sheet>
                 </div>
-                <Search/>
+                
                 <Link href={githubRepo}>
                     <Button size={'icon'} variant={'ghost'}>
                         <Github size={20}/>

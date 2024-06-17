@@ -2,12 +2,12 @@
 import Intro from "./components/intro.mdx"
 
 const siteData: any = {
-    author: "yuanli",  // author name
-    title: "NextBlog", // website title
-    description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css", // website description
+    author: "Vinicius Gurski Ferraz",  // author name
+    title: "Vinicius.Dev", // website title
+    description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css to publish my articles and projects", // website description
     theme: "light", // light | dark
-    language: "zh-CN", // zh-CN | en
-    githubRepo: "https://github.com/imyuanli/next-blog", // your blog's github repo
+    language: "en", // zh-CN | en
+    githubRepo: "https://github.com/ViniciusTheCoder", // your blog's github repo
 
     // how to change the favicon of the website?
     // change the app/favicon.ico file directly，or refer to the document below
@@ -16,7 +16,7 @@ const siteData: any = {
     //header config
     header: {
         logo: "/logo.png",  //  /public/logo.png
-        title: "NextBlog", // header title
+        title: "Vinicius.Dev", // header title
 
         // navigation bar
         routes: [
@@ -32,13 +32,13 @@ const siteData: any = {
     },
 
     home: {
-        title: "Welcome to NextBlog",
+        title: "Welcome to Vinicius.Dev",
 
         // introduction or about me
         intro: Intro, // file path of the introduction
         socials: {
-            email: "286547316@qq.com",
-            github: "https://github.com/imyuanli",
+            email: "vinigurskiferraz@gmail.com",
+            github: "https://github.com/ViniciusTheCoder",
             twitter: "https://twitter.com",
             linkedin: "",
             facebook: "",
@@ -54,7 +54,7 @@ const siteData: any = {
 
     project: {
         title: "Look what I've done",
-        description: "Some small tools made by oneself",
+        description: "Some small tools made by myself",
 
         // status color and text
         getStatus: (status: string) => {
