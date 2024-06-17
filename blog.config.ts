@@ -98,37 +98,19 @@ const siteData: any = {
         // you can add more fields according to your needs ,but you need to modify the code in the project/page.tsx file
         projects: [
             {
-                name: "NextBlog",
-                description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css",
-                href: "https://next-blog.imyuanli.cn",
-                github: "imyuanli/next-blog",
-                status: "active",
-            },
-            {
-                name: "AllDone",
-                description: "One stop project management platform",
+                name: "LangchainGPT",
+                description: "An chatbot interface integrated to OpenAI API to build your own base-knowledgment AI, made with React, Next, Node, Typescript & Tailwind",
+                href: "https://github.com/ViniciusTheCoder/LangChainGPT",
+                github: "ViniciusTheCoder/LangChainGPT",
                 status: "dev",
             },
             {
-                name: "Slash Editor",
-                description: "A simple rich text editor",
-                href: "https://slash.imyuanli.cn",
-                github: "imyuanli/slash-editor",
-            },
-            {
-                name: "RMX",
-                description: "Readme 是一个在线编辑器，可以帮助开发人员为他们快速的制作项目的README.md，同时也满足Github个人主页的一些模板",
-                href: "https://readme.imyuanli.cn/",
-                github: "imyuanli/readme",
-                status: "filed",
-            },
-            {
-                name: "简历生成",
-                description: "一款极简的在线简历生成器，存在诸多bug，可能会进行大升级！",
-                href: "https://resume.imyuanli.cn/",
-                github: "imyuanli/resume",
-                status: "offline",
-            },
+                name: "AppKawa",
+                description: "An mobile app to track customer returnals and organizate events",
+                href: "https://github.com/ViniciusTheCoder/AppKawa",
+                github: "ViniciusTheCoder/AppKawa",
+                status: "dev",
+            }
         ],
     },
 
