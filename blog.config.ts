@@ -40,7 +40,7 @@ const siteData: any = {
             email: "vinigurskiferraz@gmail.com",
             github: "https://github.com/ViniciusTheCoder",
             twitter: "https://twitter.com",
-            linkedin: "",
+            linkedin: "https://www.linkedin.com/in/viniciusgferraz/",
             facebook: "",
             instagram: "",
             youtube: "",
