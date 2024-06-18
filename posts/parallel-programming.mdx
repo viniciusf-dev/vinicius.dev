@@ -70,6 +70,23 @@ Parallel Time in s: 0.0132717s
 Serial Time in s: 0.025434s
 ```
 
+#### Insights over the results above
+If we compare the Parallel Time (0.0132717s) with the Serial Time (0.025434s) it's possible to see that the time lapse it's almost 65%, exactly 63.38%.
+
+The time difference demonstrates the potential benefit of parallel programming in this specific code snippet. The parallel execution ran almost twice as fast (63.38% faster) compared to the sequential version.
+
+In complex applications, even a moderate speedup like 63.38% can translate to significant advantages:
+
+- Reduced processing time
+- Increased throughput
+- Improved resource utilization
+
+However, there are some caveats to consider:
+
+- Benchmarking: This small code snippet might not represent the entire application's behavior. It's essential to benchmark the complete application with realistic workloads to assess the overall impact of parallelization.
+- Overhead: Parallel programming introduces overhead due to task creation, synchronization, and communication between threads. In some cases, the overhead might outweigh the benefits, especially for small tasks.
+- Problem suitability: Not all problems benefit equally from parallelization. The code needs to be designed to leverage multiple threads effectively for significant speedup.
+
 ### Challenges in Parallel Programming
 
 #### Race Conditions
@@ -81,7 +98,7 @@ Deadlocks happen when multiple threads are waiting for resources held by each ot
 #### Debugging Complexity
 The very essence of parallelism - multiple threads executing instructions simultaneously - makes debugging intricate. Traditional debugging techniques, which often rely on a step-by-step approach, become cumbersome when dealing with unpredictable thread interactions.
 
-On Parallel Programming, we have de <b>Heisenbugs</b>. These elusive bugs only appear when running the program in parallel, disappearing in a single-threaded environment. Identifying and reproducing such bugs can be a significant challenge.
+On Parallel Programming, we have the <b>Heisenbugs</b>. These elusive bugs only appear when running the program in parallel, disappearing in a single-threaded environment. Identifying and reproducing such bugs can be a significant challenge.
 
 Well, that's enough for the first article, I hope you learned something new after finished this reading :D.
 
