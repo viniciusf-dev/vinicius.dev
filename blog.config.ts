@@ -39,7 +39,7 @@ const siteData: any = {
         socials: {
             email: "vinigurskiferraz@gmail.com",
             github: "https://github.com/ViniciusTheCoder",
-            twitter: "https://twitter.com",
+            twitter: "",
             linkedin: "https://www.linkedin.com/in/viniciusgferraz/",
             facebook: "",
             instagram: "",
@@ -115,7 +115,7 @@ const siteData: any = {
     },
 
     comment: {
-        enabled: true,
+        enabled: false,
         engine: "giscus", // giscus | utterances
         // giscus doc: https://giscus.app
         giscus: {

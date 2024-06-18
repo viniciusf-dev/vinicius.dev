@@ -1,37 +1,66 @@
 ---
-title: "Introduction NextBlog"
-summary: "NextBlog is true simplicity rather than simplicity, it is a minimal, responsive, and easy-to-use blog template ⚡."
-date: 2024-05-08
-tags: ["Next.js", "TypeScript", "MDX", "Shadcn-ui", "Tailwind CSS", "Blog"]
+title: "#1 What is Parallel Programming"
+summary: "Parallel programming is a type of computing architecture where multiple processes run simultaneously. This approach can significantly speed up computations by leveraging multi-core processors."
+date: 2024-06-17
+tags: ["Parallel Programming", "C#", "Cuda", "Multi-core", "Computing Architecture", "Processors"]
 draft: false
 ---
 
 ### Introduction
-NextBlog is **True simplicity rather than simplicity**✨, it is a minimal, responsive, and easy-to-use blog template ⚡.
+Parallel programming is a type of computing architecture where multiple processes run simultaneously. This approach can significantly speed up computations by leveraging multi-core processors.
 
-Simple and clean, it is designed to place the reader's attention on what really matters: the content.
+To understand the concepts of Parallel, it's fundamental that you know what are Threads and Multi Threads. 
 
-### Tech Stack
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [MDX](https://mdxjs.com/)
-- [Shadcn-ui](https://ui.shadcn.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
+### What is a Thread?
+The smallest sequence of programmed instructions that can be executed directly in the processor. To improve the performance of a proccess, it's possible to run your process in multiple threads in parallel, this will improve the performance of your process, making it happen faster.
 
+### What is a Process?
+Lets explain this topic with a simple example. When you open Java in your computer, the OS starts a new process which runs in parallel to other programs. Inside of each process its possible to use the multiple threads of your CPU, using more available cores.
 
-### How to use?
+### Why should I worry myself with Parallel Programming?
+In today’s world, the demand for faster and more efficient applications is increasing. Whether you’re working on data processing, game development, or web applications, the ability to run tasks concurrently can be a game-changer.
 
-NextBlog can be deployed with Vercel, with a single click.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/imyuanli/next-blog)
-
-Than you can clone the repository and run the following commands:
+### Case 
+Analyzing the performance difference between a Parallel and Sequential program, let's analyze the following code:
 
 ```bash
-git clone
-cd next-blog
-npm install
-npm run dev
+static const int nx = 128; 
+static const int ny = 128; 
+static const int nz = 128;
+
+double start_time, run_time;
+int nThreads = 1; 
+fftw_complex *input_array;
+input_array = (fftw_complex*) fftw_malloc((nx*ny*nz) * sizeof(fftw_complex));
+        
+        
+memcpy(input_array, Re.data(), (nx*ny*nz) * sizeof(fftw_complex));
+
+fftw_complex *output_array;
+output_array = (fftw_complex*) fftw_malloc((nx*ny*nz) * sizeof(fftw_complex));
+
+start_time = omp_get_wtime();
+clock_t start_time1 = clock();
+            
+fftw_init_threads();
+fftw_plan_with_nthreads(nThreads); //omp_get_max_threads()
+fftw_plan forward = fftw_plan_dft_3d(nx, ny, nz, input_array, output_array, FFTW_FORWARD, FFTW_ESTIMATE);
+fftw_execute(forward);
+fftw_destroy_plan(forward);
+fftw_cleanup();
+    
+run_time = omp_get_wtime() - start_time;
+clock_t end1 = clock();
+
+cout << " Parallel Time in s: " <<  run_time << "s\n";
+cout << "Serial Time in s: " <<  (double)(end1-start_time1) / CLOCKS_PER_SEC << "s\n";
+
+        
+memcpy(Im.data(),output_array, (nx*ny*nz) * sizeof(fftw_complex));
+        
+fftw_free(input_array);
+fftw_free(output_array);
+
 ```
 
 You only need to modify the configuration file content and write articles.
