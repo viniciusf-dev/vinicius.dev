@@ -63,30 +63,26 @@ fftw_free(output_array);
 
 ```
 
-You only need to modify the configuration file content and write articles.
+The provided code performs a 3D Fast Fourier Transform (FFT) in both parallel and sequential manners, and then prints the execution times for each approach. If i run the code above in a 2 thread CPU, we have the following results:
 
-- configuration file: `blog.config.ts`
-- article file: `posts/*.mdx`
+```bash
+Parallel Time in s: 0.0132717s
+Serial Time in s: 0.025434s
+```
 
-That's it!
+### Challenges in Parallel Programming
+
+#### Race Conditions
+Imagine two runners competing in a relay race, but without a clear baton passing order. In parallel programming, a race condition occurs when multiple threads access and modify the same shared data without proper synchronization. This can lead to unpredictable and often incorrect program behavior.
+
+#### Deadlocks
+Deadlocks happen when multiple threads are waiting for resources held by each other, creating a frustrating stalemate. Imagine two cars at a dead-end intersection, each needing to move forward but blocked by the other.
+
+#### Debugging Complexity
+The very essence of parallelism - multiple threads executing instructions simultaneously - makes debugging intricate. Traditional debugging techniques, which often rely on a step-by-step approach, become cumbersome when dealing with unpredictable thread interactions.
+
+On Parallel Programming, we have de <b>Heisenbugs</b>. These elusive bugs only appear when running the program in parallel, disappearing in a single-threaded environment. Identifying and reproducing such bugs can be a significant challenge.
+
+Well, that's enough for the first article, I hope you learned something new after finished this reading :D.
 
 If you have any questions, please feel free to ask me.
-
-If you like this project, please give me a star ✨ [GitHub](https://github.com/imyuanli/next-blog). Thank you!
-
-Know more about me: [imyuanli](https://imyuanli.cn) 🥰.
-
-### Features
-
-1. [x] **Mobile responsive**
-2. [x] **Comments**
-3. [x] **Search**
-4. [x] **SEO friendly**
-5. [ ] **Syntax highlighting**
-6. [ ] **Tags**
-7. [ ] **Pagination**
-8. [x] **Dark mode**
-9. [ ] **RSS**
-10. [ ] **remark and rehype plugins**
-and more...
-
