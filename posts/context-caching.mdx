@@ -50,7 +50,7 @@ Answer: Well, that's a nice question. The Ring-tailed lemur is easily identified
 
 ```
 
-Alright, so the above prompt it's an example of a basic instruction we have to pass to the LLM, for the model learn how to act given a user interaction, this prompt have 410 tokens. Now think with me, in real projects we have prompts with more than 1000 tokens, and let's not forget that besides de prompt, the LLM also has to consume the video, to vectorize data for example. This means that everytime a user make a question to the LLM, the AI will have to process the entire prompt above and also the full video, to properly answer the questions.
+Alright, so the above prompt it's an example of a basic instruction we have to pass to the LLM, for the model learn how to act given a user interaction, this prompt have 410 tokens. Now think with me, in real projects we have prompts with more than 1000 tokens, and let's not forget that besides the prompt, the LLM also has to consume the video, to vectorize data for example. This means that everytime a user make a question to the LLM, the AI will have to process the entire prompt above and also the full video, to properly answer the questions.
 
 When frequently reprocessing the prompt and the video, this process can get expansive, and we do not like expansive softwares, so with ***context caching***, we are able to cache the entire prompt and even the entire video, so if we have 1 or 100 requests to the LLM, all the context are cached, extremely reducing the operation cost.
 
