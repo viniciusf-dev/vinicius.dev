@@ -1,0 +1,65 @@
+---
+title: "#2 Context Caching in LLMs"
+summary: "Cache input tokens and consult them for subsequent requests."
+date: 2024-06-27
+tags: ["Context Caching", "Gemini", "Tokens", 'Prompt']
+draft: false
+---
+
+### Introduction
+Cache input tokens and consult them for subsequent requests.
+
+Recently, Google launched on their API a new feature for LLMs named 'Context Caching'. This new feat aims to cache the input tokens used for instruct the AI, such improvement as this one strongly reduces the costs with LLMs API.
+
+### Why do we have this costs reduction?
+
+Well, lets see how an application with LLMs works, for example let's say that we have a model that analyzes a youtube video that have 10 hours of content. Based in the video, the AI will answer questions of the entire content from the video. If you want that this works properly, you'll have to create a prompt that give the instructions to the AI to watch the video and based on the user question and history, answer based on the video. Let's see the following prompt of this example:
+
+```bash
+
+PROMPT=
+'''
+***MAIN GOAL***
+Given the user question and chat history, rewrite the user message to a standalone question, and answer it only based on the video we give you access. You will follow this format:
+
+Chat History:
+{chat_history}
+Follow Up Input: {question}
+Standalone question:
+
+Don't forget to be kind.
+
+***MAIN GOAL***
+
+***CONTEXT***
+
+The video we give it to you, it's about the different species of primates located in Madagascar. The video content it's divided between informative blocks containing info about each species. So if the user asks you about Indri, a specie of primate, you'll have to locate where in the video are the informations about Indri, and then answer the question. If the user ask about an species that are not present in the video, you'll answer that you have no informations about the questioned species, and that you are daily improving your knowledgment base.
+
+***CONTEXT***
+
+***EXAMPLES***
+
+Here are some examples of how you have to think and answer the questions:
+
+Question: I've heard about a species named Ring-tailed lemur, but I know nothing about it. Can you tell me a little about this species?
+Chain of Thought: the user asked about the Ring-tailed lemur, I first need to locate this name on the video and then formulate a answer for the user, watching the video, the storyteller says that the Ring-tailed lemur is perhaps the most recognizable lemur species, due to its distinctive black and white striped tail. Ring-tailed lemurs are social animals that live in groups of up to 30 individuals. That's the information I have to answer the question.
+Answer: Well, that's a nice question. The Ring-tailed lemur is easily identified by its striking black and white striped tail, the ring-tailed lemur is the most recognizable lemur species. Highly social, these fascinating creatures live in groups of up to 30 individuals. He's also the main inspiration for King Julian from Madagascar.
+
+***EXAMPLES***
+'''
+
+```
+
+Alright, so the above prompt it's an example of a basic instruction we have to pass to the LLM, for the model learn how to act given a user interaction, this prompt have 410 tokens. Now think with me, in real projects we have prompts with more than 1000 tokens, and let's not forget that besides de prompt, the LLM also has to consume the video, to vectorize data for example. This means that everytime a user make a question to the LLM, the AI will have to process the entire prompt above and also the full video, to properly answer the questions.
+
+When frequently reprocessing the prompt and the video, this process can get expansive, and we do not like expansive softwares, so with ***context caching***, we are able to cache the entire prompt and even the entire video, so if we have 1 or 100 requests to the LLM, all the context are cached, extremely reducing the operation cost.
+
+### How it works?
+When you start run your project, obviously the first request will have the regular price. But after that, you already cached the context for the LLM and the requests will become pretty cheap. Taking Gemini 1.5 Flash as example, 1 million tokens costs $0.35, while 1 million of cached tokens costs only $0.085 tokens, basically 75% off from the original price.
+
+### What can I do with Context Caching?
+- You can cache Images, Documents, Videos and Audios.
+- When you create a cache, you can define the time your content will be in cache. After the defined time ends, the cache will be terminated. The cache is charged based on the time that he is activated.
+- To use Context Caching, you have to cache at least 32k tokens of context.
+- This feature is already available on the Gemini 1.5 Flash and Gemini 1.5 Pro, this week a beta was released on VertexAI.
+
