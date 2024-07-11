@@ -1,21 +1,11 @@
-'use client';
-
 import {Separator} from "@/components/ui/separator";
-import {usePathname} from "next/navigation";
-import siteData from "@/blog.config";
 
-
-const Title = () => {
-    const pathname = usePathname()
-    const nameArr = pathname.split('/')
-    const name = nameArr[nameArr.length - 1]
-    const data = name ? siteData[name] : siteData.home
-
+const Title = ({title, description}: any) => {
     return (
-        data && <div>
-          <h1>{data?.title}</h1>
-            {data?.description && <p className={'text-zinc-600'}>{data?.description}</p>}
-          <Separator/>
+        <div className={'pb-6'}>
+            <h1>{title}</h1>
+            {description && <p className={'text-zinc-600'}>{description}</p>}
+            <Separator/>
         </div>
     );
 }

@@ -1,12 +1,10 @@
 import type {Metadata} from "next";
-import { Analytics } from "@vercel/analytics/react"
 import {Inter} from "next/font/google";
 import "./globals.css";
 import {Separator} from "@/components/ui/separator";
 import Header from "@/components/header";
 import siteData from "@/blog.config";
 import ProviderTheme from "@/provider/provider-theme";
-import Title from "@/components/title";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -26,11 +24,9 @@ export default function RootLayout({
         <ProviderTheme>
             <Header/>
             <Separator/>
-            <main className={'container md:my-12 my-8'}>
+            <main className={'container my-12'}>
                 <div className={'prose md:prose-lg min-w-full w-full dark:prose-invert'}>
-                    <Title/>
                     {children}
-                    <Analytics />
                 </div>
             </main>
         </ProviderTheme>
