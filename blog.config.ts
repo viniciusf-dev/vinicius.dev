@@ -99,17 +99,24 @@ const siteData: any = {
         projects: [
             {
                 name: "LangchainGPT",
-                description: "An chatbot interface integrated to OpenAI API to build your own base-knowledgment AI, made with React, Next, Node, Typescript & Tailwind",
+                description: "An chatbot interface integrated to OpenAI API to build your own base-knowledgment AI, made with React, Next, Node, Typescript & Tailwind.",
                 href: "https://github.com/ViniciusTheCoder/LangChainGPT",
-                github: "ViniciusTheCoder/LangChainGPT",
+                github: "https://github.com/ViniciusTheCoder/LangChainGPT",
                 status: "dev",
             },
             {
                 name: "AppKawa",
-                description: "An mobile app to track customer returnals and organizate events",
+                description: "An mobile app to track customer returnals and organizate events.",
                 href: "https://github.com/ViniciusTheCoder/AppKawa",
-                github: "ViniciusTheCoder/AppKawa",
+                github: "https://github.com/ViniciusTheCoder/AppKawa",
                 status: "dev",
+            },
+            {
+                name: "Decoding Gamer Emotions",
+                description: "Sentiment Analysis of Game Reviews with Large Language Models.",
+                href: "https://github.com/ViniciusTheCoder",
+                github: "",
+                status: "offline",
             }
         ],
     },

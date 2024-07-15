@@ -1,4 +1,4 @@
-import {Facebook, Github, Instagram, Linkedin, Mail, Twitter, Youtube} from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import siteData from "@/blog.config";
 import Link from "next/link";
 import Title from "@/components/title";
@@ -6,12 +6,7 @@ import Intro from "@/components/intro.mdx";
 
 const icons: any = {
     email: <Mail/>,
-    github: <Github/>,
-    twitter: <Twitter/>,
-    facebook: <Facebook/>,
-    youtube: <Youtube/>,
-    linkedin: <Linkedin/>,
-    instagram: <Instagram/>,
+    linkedin: <Linkedin/>
 }
 
 const Home = () => {
