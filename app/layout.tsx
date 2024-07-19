@@ -3,6 +3,7 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import {Separator} from "@/components/ui/separator";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 import siteData from "@/blog.config";
 import ProviderTheme from "@/provider/provider-theme";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
                     {children}
                 </div>
             </main>
+            <Footer/>
         </ProviderTheme>
         </body>
         </html>

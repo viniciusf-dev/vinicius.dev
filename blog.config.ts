@@ -1,24 +1,17 @@
-// Purpose: This file is used to configure the blog, including the author, title, description, and other settings.
 import Intro from "./components/intro.mdx"
 
 const siteData: any = {
-    author: "Vinicius Gurski Ferraz",  // author name
-    title: "Vinicius.Dev", // website title
-    description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css to publish my articles and projects", // website description
-    theme: "light", // light | dark
-    language: "en", // zh-CN | en
-    githubRepo: "https://github.com/ViniciusTheCoder", // your blog's github repo
+    author: "Vinicius Gurski Ferraz",
+    title: "Vinicius.Dev", 
+    description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css to publish my articles and projects", 
+    theme: "light", 
+    language: "en",
+    githubRepo: "https://github.com/ViniciusTheCoder", 
 
-    // how to change the favicon of the website?
-    // change the app/favicon.ico file directly，or refer to the document below
-    // https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons
-
-    //header config
     header: {
-        logo: "/logo.png",  //  /public/logo.png
-        title: "Vinicius.Dev", // header title
+        logo: "/logo.png", 
+        title: "Vinicius.Dev", 
 
-        // navigation bar
         routes: [
             {
                 name: 'Blog',
@@ -56,15 +49,7 @@ const siteData: any = {
         title: "Look what I've done",
         description: "Some small tools made by myself",
 
-        // status color and text
         getStatus: (status: string) => {
-            // you can customize the status color and text！
-
-            // dev: Under development or planning.
-            // active: Currently focused on this project.
-            // filed: Not upgrading will only fix bugs.
-            // offline: Going offline soon.
-            // none: Keep running.
             if(!status) return {}
 
             switch (status) {
@@ -90,12 +75,6 @@ const siteData: any = {
                     }
             }
         },
-
-        // name, description, href are required
-        // github: username/repo
-        // status: getStatus return value
-        // and so on
-        // you can add more fields according to your needs ,but you need to modify the code in the project/page.tsx file
         projects: [
             {
                 name: "LangchainGPT",
@@ -123,8 +102,7 @@ const siteData: any = {
 
     comment: {
         enabled: false,
-        engine: "giscus", // giscus | utterances
-        // giscus doc: https://giscus.app
+        engine: "giscus", 
         giscus: {
             repo: "imyuanli/next-blog",
             repoId: "R_kgDOKTZ_kQ",
@@ -139,7 +117,7 @@ const siteData: any = {
             loading: "lazy",
         },
 
-        // utterances doc: https://utteranc.es
+        
         utterances: {
             src: "https://utteranc.es/client.js",
             repo: "imyuanli/next-blog",
@@ -152,14 +130,15 @@ const siteData: any = {
     },
 
     search: {
-        enabled: true,
-        engine: "cmdk", //  cmdk | algolia
-        // todo algolia search
-        // algolia: {
-        //     appId: "",
-        //     apiKey: "",
-        // }
-    }
+        enabled: false,
+        engine: "cmdk",
+    },
+
+    footer: {
+        isShow: true,
+        
+        isShowPoweredBy: true,
+    },
 }
 
 export default siteData

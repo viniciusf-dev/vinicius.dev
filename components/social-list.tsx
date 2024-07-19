@@ -1,25 +1,25 @@
 'use client';
 
 import Link from "next/link";
-import {Facebook, Github, Instagram, Linkedin, Mail, Twitter, Youtube} from "lucide-react";
+import {Github, Linkedin, Mail} from "lucide-react";
 import siteData from "@/blog.config";
+import {cn} from "@/lib/utils";
 
 const icons: any = {
     email: <Mail/>,
     github: <Github/>,
-    twitter: <Twitter/>,
-    facebook: <Facebook/>,
-    youtube: <Youtube/>,
-    linkedin: <Linkedin/>,
-    instagram: <Instagram/>,
+    linkedin: <Linkedin/>
 }
 
 
-const SocialList = () => {
+const SocialList = ({isFooter}: any) => {
     const {home: {socials}} = siteData;
 
     return (
-        <div className={'mt-8 flex items-center space-x-4'}>
+        <div className={cn("flex items-center space-x-8", {
+            "mt-8": !isFooter,
+            "scale-75": isFooter,
+        })}>
             {Object.keys(socials).map((item) => {
                 if (socials[item]) {
                     return (
