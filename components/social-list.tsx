@@ -1,14 +1,15 @@
 'use client';
 
 import Link from "next/link";
-import {Github, Linkedin, Mail} from "lucide-react";
+import {Github, Linkedin, Mail, Twitter} from "lucide-react";
 import siteData from "@/blog.config";
 import {cn} from "@/lib/utils";
 
 const icons: any = {
     email: <Mail/>,
     github: <Github/>,
-    linkedin: <Linkedin/>
+    linkedin: <Linkedin/>,
+    twitter: <Twitter/>
 }
 
 

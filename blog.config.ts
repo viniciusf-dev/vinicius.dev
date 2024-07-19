@@ -32,7 +32,7 @@ const siteData: any = {
         socials: {
             email: "vinigurskiferraz@gmail.com",
             github: "https://github.com/ViniciusTheCoder",
-            twitter: "",
+            twitter: "https://x.com/emosafadao_",
             linkedin: "https://www.linkedin.com/in/viniciusgferraz/",
             facebook: "",
             instagram: "",

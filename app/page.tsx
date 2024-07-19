@@ -20,18 +20,7 @@ const Home = () => {
                 {Object.keys(socials).map((item) => {
                     if (socials[item]) {
                         return (
-                            <div className={'hover:scale-110 duration-200'} key={item}>
-                                {
-                                    item == 'email' ?
-                                        <Link href={`mailto:${socials[item]}`}>
-                                            {icons[item]}
-                                        </Link>
-                                        :
-                                        <Link href={socials[item]}>
-                                            {icons[item]}
-                                        </Link>
-                                }
-                            </div>
+                            <div></div>
                         )
                     }
                 })}
