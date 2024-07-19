@@ -2,15 +2,15 @@ import Intro from "./components/intro.mdx"
 
 const siteData: any = {
     author: "Vinicius Gurski Ferraz",
-    title: "Vinicius.Dev", 
-    description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css to publish my articles and projects", 
-    theme: "light", 
+    title: "Vinicius.Dev",
+    description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css to publish my articles and projects",
+    theme: "light",
     language: "en",
-    githubRepo: "https://github.com/ViniciusTheCoder", 
+    githubRepo: "https://github.com/ViniciusTheCoder",
 
     header: {
-        logo: "/logo.png", 
-        title: "Vinicius.Dev", 
+        logo: "/logo.png",
+        title: "Vinicius.Dev",
 
         routes: [
             {
@@ -50,7 +50,7 @@ const siteData: any = {
         description: "Some small tools made by myself",
 
         getStatus: (status: string) => {
-            if(!status) return {}
+            if (!status) return {}
 
             switch (status) {
                 case "active":
@@ -96,13 +96,43 @@ const siteData: any = {
                 href: "https://github.com/ViniciusTheCoder",
                 github: "",
                 status: "offline",
+            },
+            {
+                name: "VegMaromba",
+                description: "Website to check vegan supplements",
+                href: "https://github.com/ViniciusTheCoder/VegMaromba",
+                github: "https://github.com/ViniciusTheCoder/VegMaromba",
+                status: "active",
+            },
+            {
+                name: "RentX",
+                description: "Mobile app developed in React Native (available for iOS and Android) to rent cars",
+                href: "https://github.com/ViniciusTheCoder/RentX",
+                github: "https://github.com/ViniciusTheCoder/RentX",
+                status: "filed",
+            },
+            {
+                name: "RentX API",
+                description: "API that runs as a backend in the RentX app, this API list all the cars available in the catalog",
+                href: "https://github.com/ViniciusTheCoder/RentX-api",
+                github: "https://github.com/ViniciusTheCoder/RentX-api",
+                status: "filed",
+            },
+            {
+
+                name: "GoFinance",
+                description: "Mobile app developed in React Native (available for iOS and Android) to control your bank accounts and transactions",
+                href: "https://github.com/ViniciusTheCoder/finances_mobile.app",
+                github: "https://github.com/ViniciusTheCoder/finances_mobile.app",
+                status: "filed",
+
             }
         ],
     },
 
     comment: {
         enabled: false,
-        engine: "giscus", 
+        engine: "giscus",
         giscus: {
             repo: "imyuanli/next-blog",
             repoId: "R_kgDOKTZ_kQ",
@@ -117,7 +147,7 @@ const siteData: any = {
             loading: "lazy",
         },
 
-        
+
         utterances: {
             src: "https://utteranc.es/client.js",
             repo: "imyuanli/next-blog",
@@ -136,7 +166,7 @@ const siteData: any = {
 
     footer: {
         isShow: true,
-        
+
         isShowPoweredBy: true,
     },
 }
