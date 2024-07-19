@@ -160,7 +160,7 @@ const siteData: any = {
     },
 
     search: {
-        enabled: false,
+        enabled: true,
         engine: "cmdk",
     },
 
