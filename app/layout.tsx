@@ -4,6 +4,7 @@ import "./globals.css";
 import {Separator} from "@/components/ui/separator";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import BackToTop from "@/components/back-to-top";
 import siteData from "@/blog.config";
 import ProviderTheme from "@/provider/provider-theme";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
                 </div>
             </main>
             <Footer/>
+            <BackToTop/>
         </ProviderTheme>
         </body>
         </html>
