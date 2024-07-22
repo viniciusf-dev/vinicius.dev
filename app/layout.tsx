@@ -1,4 +1,5 @@
 import type {Metadata} from "next";
+import { Analytics } from "@vercel/analytics/react"
 import {Inter} from "next/font/google";
 import "./globals.css";
 import {Separator} from "@/components/ui/separator";
@@ -29,6 +30,7 @@ export default function RootLayout({
             <main className={'container my-12'}>
                 <div className={'prose md:prose-lg min-w-full w-full dark:prose-invert'}>
                     {children}
+                    <Analytics />
                 </div>
             </main>
             <Footer/>
