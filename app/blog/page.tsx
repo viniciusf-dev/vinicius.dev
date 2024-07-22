@@ -67,7 +67,7 @@ const Blog = () => {
                           <CardFooter className={'flex justify-start pl-0'}>
                             <Link href={`/blog/${post.id}`}>
                               <Button>
-                                Leia mais <ArrowRight size={16} className={'ml-2'}/>
+                                Read more <ArrowRight size={16} className={'ml-2'}/>
                               </Button>
                             </Link>
                           </CardFooter>
