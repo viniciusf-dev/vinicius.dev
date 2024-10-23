@@ -27,6 +27,7 @@ const getPostsData = () => {
             stats: readingTime(matterResult.content)
         }
     })
+    
 }
 
 const Blog = () => {
