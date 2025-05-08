@@ -33,6 +33,7 @@ const getPostsData = () => {
 const Blog = () => {
     const {blog: {title, description}} = siteData;
     const posts = getPostsData().filter((post: any) => !post.draft)
+    .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return (
         <>

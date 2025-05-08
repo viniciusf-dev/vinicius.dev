@@ -4,9 +4,9 @@ const siteData: any = {
     author: "Vinicius Gurski Ferraz",
     title: "Vinicius.Dev",
     description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css to publish my articles and projects",
-    theme: "light",
+    theme: "dark",
     language: "en",
-    githubRepo: "https://github.com/ViniciusTheCoder",
+    githubRepo: "https://github.com/viniciusf-dev",
 
     header: {
         logo: "/logo.png",
@@ -31,7 +31,7 @@ const siteData: any = {
         intro: Intro, // file path of the introduction
         socials: {
             email: "vinigurskiferraz@gmail.com",
-            github: "https://github.com/ViniciusTheCoder",
+            github: "https://github.com/viniciusf-dev",
             twitter: "",
             linkedin: "https://www.linkedin.com/in/viniciusgferraz/",
             facebook: "",
@@ -42,7 +42,7 @@ const siteData: any = {
 
     blog: {
         title: 'My Blog',
-        description: 'All of my long-fesign, and more, collected in chronological order.',
+        description: 'Some texts about stuff that I like',
     },
 
     project: {
@@ -77,10 +77,45 @@ const siteData: any = {
         },
         projects: [
             {
+                name: "Nebulla",
+                description: "A lightweight, high-performance text embedding model implemented in Rust.",
+                href: "https://github.com/viniciusf-dev/nebulla",
+                github: "https://github.com/viniciusf-dev/nebulla",
+                status: "active",
+            },
+            {
+                name: "Why It Sucks",
+                description: "Discover why some games are so bad with the power of Generative AI.",
+                href: "https://why-it-sucks.vercel.app/",
+                github: "https://github.com/viniciusf-dev/WhyItSucks",
+                status: "active",
+            },
+            {
+                name: "Poetries By Markov",
+                description: "A sophisticated non-LLM-based poetry generator that uses Markov chains to create original poems.",
+                href: "https://github.com/viniciusf-dev/poetries-by-markov",
+                github: "https://github.com/viniciusf-dev/poetries-by-markov",
+                status: "active",
+            },
+            {
+                name: "Smart.Notes",
+                description: "A fullstack AI application that receives videoclasses in audio format and convert them into smart summaries and questions to improve study.",
+                href: "https://smart-notes-phi.vercel.app/",
+                github: "https://github.com/ViniciusTheCoder/smart.notes",
+                status: "dev",
+            },
+            {
                 name: "LangchainGPT",
                 description: "An chatbot interface integrated to OpenAI API to build your own base-knowledgment AI, made with React, Next, Node, Typescript & Tailwind.",
                 href: "https://github.com/ViniciusTheCoder/LangChainGPT",
                 github: "https://github.com/ViniciusTheCoder/LangChainGPT",
+                status: "filed",
+            },
+            {
+                name: "MelodyMover",
+                description: "An web interface to convert music playlists between different music apps.",
+                href: "https://github.com/ViniciusTheCoder/melody-mover",
+                github: "https://github.com/ViniciusTheCoder/melody-mover",
                 status: "dev",
             },
             {
@@ -88,21 +123,21 @@ const siteData: any = {
                 description: "An mobile app to track customer returnals and organizate events.",
                 href: "https://github.com/ViniciusTheCoder/AppKawa",
                 github: "https://github.com/ViniciusTheCoder/AppKawa",
-                status: "dev",
+                status: "filed",
             },
             {
                 name: "Decoding Gamer Emotions",
                 description: "Sentiment Analysis of Game Reviews with Large Language Models.",
                 href: "https://github.com/ViniciusTheCoder",
                 github: "",
-                status: "offline",
+                status: "dev",
             },
             {
                 name: "VegMaromba",
                 description: "Website to check vegan supplements",
                 href: "https://github.com/ViniciusTheCoder/VegMaromba",
                 github: "https://github.com/ViniciusTheCoder/VegMaromba",
-                status: "active",
+                status: "filed",
             },
             {
                 name: "RentX",
